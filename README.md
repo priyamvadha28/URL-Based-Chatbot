@@ -43,3 +43,43 @@ Your terminal prompt should now show (venv) at the beginning, indicating the vir
 **Install Dependencies:**
       
       pip install -r requirements.txt
+
+**Usage:**
+
+Once the installation and configuration are complete, you can run the application:
+- Activate your virtual environment (if not already active).
+- Run the Python script:
+
+         python app.py
+
+The script will first:
+- Download NLTK data (if not already present).
+- Load data from the predefined URLs.
+- Split the text into chunks.
+- Initialize OpenAI embeddings and create the FAISS vector store.
+- Initialize the OpenAI Chat LLM and the Retrieval QA chain.
+
+After these setup steps, you will see a Prompt where you can type your questions:
+
+    Downloading NLTK data (if not already present)...
+    NLTK data download complete.
+    Loading data from URLs...
+    Loaded X documents from URLs.
+    Splitting text into chunks...
+    Created Y text chunks.
+    Initializing OpenAI Embeddings...
+    Creating FAISS vector store...
+    FAISS vector store created.
+    Initializing ChatOpenAI LLM...
+    Initializing Retrieval QA with Sources Chain...
+    Ready to answer questions!
+    
+    --- Start interactive Q&A ---
+    Type 'exit' to quit.
+    Prompt: What is Vicuna?
+
+Type your question and press Enter. The assistant will provide an answer and, if available, the source URLs.
+
+- To exit the application, type exit and press Enter.
+
+**Author:** This project is developed and maintained by Priyamvadha Pradeep.
